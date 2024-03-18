@@ -1,0 +1,210 @@
+<header>
+    <div class="container-fluid py-2" id="cards-filters">
+        <div class="container-fluid">
+            <div class="d-flex justify-content-start">
+                <div class="my-1 me-2" id="period-filter-div"></div>
+                <div class="my-1 me-2" id="bank-name-filter-div"></div>
+                <div class="my-1 me-2" id="card-name-filter-div"></div>
+                <div class="my-1 me-2" id="card-type-filter-div">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            id="card-type-dropdown-button" aria-expanded="false" data-bs-auto-close="outside">
+                            <strong>Card Type:</strong> All
+                        </button>
+                        <ul class="dropdown-menu" id="card-type-dropdown-menu">
+                            <li class="p-1 border-bottom">
+                                <div class="dropdown-item">
+                                    <div class="form-check d-flex justify-content-start">
+                                        <div>
+                                            <input class="form-check-input" type="checkbox" value="-1"
+                                                id="card-type-all" checked>
+                                        </div>
+                                        <div>
+                                            <label class="form-check-label ms-2" for="card-type-all">
+                                                &emsp;<i class="fa-solid fa-credit-card text-muted"></i>&emsp;&emsp;All
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="p-1 border-bottom">
+                                <div class="dropdown-item">
+                                    <div class="form-check d-flex justify-content-start">
+                                        <div>
+                                            <input class="form-check-input" type="checkbox" value="-1" id="card-type"
+                                                checked>
+                                        </div>
+                                        <div>
+                                            <label class="form-check-label ms-2" for="card-type">
+                                                &emsp;<i class="fa-brands fa-cc-visa text-muted"></i>&emsp;&emsp;Visa
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="p-1 border-bottom">
+                                <div class="dropdown-item">
+                                    <div class="form-check d-flex justify-content-start">
+                                        <div>
+                                            <input class="form-check-input" type="checkbox" value="-1" id="card-type"
+                                                checked>
+                                        </div>
+                                        <div>
+                                            <label class="form-check-label ms-2" for="card-type">
+                                                &emsp;<i
+                                                    class="fa-brands fa-cc-amazon-pay text-muted"></i>&emsp;&emsp;RuPay
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="p-1">
+                                <div class="dropdown-item">
+                                    <div class="form-check d-flex justify-content-start">
+                                        <div>
+                                            <input class="form-check-input" type="checkbox" value="-1" id="card-type"
+                                                checked>
+                                        </div>
+                                        <div>
+                                            <label class="form-check-label ms-2" for="card-type">
+                                                &emsp;<i
+                                                    class="fa-brands fa-cc-mastercard text-muted"></i>&emsp;&emsp;Master
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <div class="d-flex justify-content-center mt-2">
+                                <button name="" class="btn apply-button align-middle px-4" role="button"
+                                    id="card-type-apply-button">
+                                    Apply
+                                </button>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+                <div class="my-1 me-2" id="status-filter-div">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            id="status-dropdown-button" aria-expanded="false" data-bs-auto-close="outside">
+                            <strong>Status:</strong> All
+                        </button>
+                        <ul class="dropdown-menu" id="status-dropdown-menu">
+                            <li class="p-1 border-bottom">
+                                <div class="dropdown-item">
+                                    <div class="form-check d-flex justify-content-start">
+                                        <div>
+                                            <input class="form-check-input" type="checkbox" value="-1" id="status-all"
+                                                checked>
+                                        </div>
+                                        <div>
+                                            <label class="form-check-label ms-2" for="status-all">
+                                                All
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="p-1 border-bottom">
+                                <div class="dropdown-item">
+                                    <div class="form-check d-flex justify-content-start">
+                                        <div>
+                                            <input class="form-check-input" type="checkbox" value="-1" id="status"
+                                                checked>
+                                        </div>
+                                        <div>
+                                            <label class="form-check-label ms-2" for="status">
+                                                Paid
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="p-1">
+                                <div class="dropdown-item">
+                                    <div class="form-check d-flex justify-content-start">
+                                        <div>
+                                            <input class="form-check-input" type="checkbox" value="-1" id="status"
+                                                checked>
+                                        </div>
+                                        <div>
+                                            <label class="form-check-label ms-2" for="status">
+                                                Due
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <div class="d-flex justify-content-center mt-2">
+                                <button name="" class="btn apply-button align-middle px-4" role="button"
+                                    id="status-apply-button">
+                                    Apply
+                                </button>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+                <div class="my-1 me-2">
+                    <div class="dropdown" id="display-options-dropdown-div-cards">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" id="display-options-dropdown-button-cards">
+                            <strong>Display Options</strong>
+                        </button>
+                        <ul class="dropdown-menu" id="display-options-dropdown-menu-cards">
+                            <li class="p-1">
+                                <div class="dropdown-item" aria-label="clear-filters">Clear Filters</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid text-center">
+        <div class="d-flex justify-content-center align-items-center">
+            <div class="mx-0 mb-0 mt-4">
+                <span class="badge rounded-pill text-bg-light" style="color: rgba(219, 64, 82, 1.0) !important; font-size: 3rem !important;">Credit Cards Dashboard</span>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="container-fluid my-3" id="cards-charts -and-pills">
+        <div class="d-flex justify-content-center">
+            <div class="row">
+                <div class="col bordered d-flex justify-content-center" style="height: 350px !important; width: calc(100vw/4);">
+                    <div class="container-fluid">
+                        <div class="row" style="height: 45%; width: 95%;">
+                            <div class="col-6 text-center d-flex justify-content-center" id="total-spend-latest-mmonth"></div>
+                            <div class="col-6 text-center d-flex justify-content-center" id="avg-spend-per-card-latest-month"></div>
+                        </div>
+                        <div class="row" style="height: 45%; width: 95%;" id="spend-month-wise"></div>
+                    </div>
+                </div>
+                <div class="col bordered d-flex justify-content-center align-items-center" id="card-wise-spends" style="height: 350px !important; width: calc(100vw/4);"></div>
+                <div class="col bordered d-flex justify-content-center align-items-center" id="bank-wise-spends" style="height: 350px !important; width: calc(100vw/4);"></div>
+                <div class="col bordered d-flex justify-content-center align-items-center" id="card-type-wise-spends" style="height: 350px !important; width: calc(100vw/4);"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" id="cards-table">
+        <div class="col-xxl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 px-3 py-3">
+            <div class="ag-theme-quartz" style="height: 350px" id="cardsMyGrid">
+            </div>
+        </div>
+    </div>
+    <!-- <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link fs-5 active" id="cards-tab" data-bs-toggle="tab" data-bs-target="#cards"
+                type="button" role="tab" aria-controls="cards" aria-selected="true">By Cards</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link fs-5" id="months-tab" data-bs-toggle="tab" data-bs-target="#months" type="button"
+                role="tab" aria-controls="months" aria-selected="false">By Months</button>
+        </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade mx-4 show active" id="cards" role="tabpanel" aria-labelledby="cards-tab">...</div>
+        <div class="tab-pane fade mx-4" id="months" role="tabpanel" aria-labelledby="months-tab">...</div>
+    </div> -->
+</main>

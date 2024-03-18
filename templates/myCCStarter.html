@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Dashboard</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/css/bootstrap.css.map">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../static/css/myCCDashboard.css">
+
+    <script src="../static/js/jquery-3-7-1.js"></script>
+    <script src="../static/js/moment2-30-1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.30.1/plotly.min.js" integrity="sha512-t+jgqOv6sDieUb0p2oGIsfp2ovdvv4sfFUdEMwlJdiJ1y6HHtnNWznay4AMiTkkvuc/vZrWdaxtBrbs6++q6Gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="data-div">
+        <div class="container d-flex flex-column justify-content-center align-items-center page-loader-div">
+            <div>
+                <h1 class="text-center mt-5 mb-5 fs-1" style="color: #626366 !important;" id="loader-data">Credit Cards Dashboard</h1>
+            </div>
+            <div class="page-loader" id="page-loader"></div>
+            <div>
+                <h4 class="text-center mt-5 fs-5" style="color: #626366 !important;" id="loader-data">Fetching data.. ( ~ 1min )</h4>
+            </div>
+        </div>
+    </div>
+    <script>
+        let agGridApiCards;
+        let cardsData;
+        let cardsGridDiv;
+    </script>
+    <script src="../static/js/myCcDashboard-data.js"></script>
+</body>
+
+</html>
